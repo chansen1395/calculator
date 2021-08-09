@@ -4,11 +4,10 @@ function toCipher(sent) {
   const lastLetter = sent.charAt(sent.length - 1);
   alert(lastLetter);
   var len = sent.length - 1;
-  sent = sent.replace(sent.charAt(0), sent.charAt(len));
-  sent = sent.replace(sent.charAt(len), firstLetter);
+  sent = lastLetter + sent.substr(1, len - 1) + firstLetter;
   
-  alert(firstLetter);
-  alert(lastLetter);
+  // alert(firstLetter);
+  // alert(lastLetter);
 
   alert(sent);
   
